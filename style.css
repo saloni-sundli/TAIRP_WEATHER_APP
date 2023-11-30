@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap');
+
+/* Meyer Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Reset styles for common elements */
+ul,
+ol {
+    list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+/* Additional reset for form elements */
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Optional: Normalize heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Optional: Normalize paragraph margins */
+p {
+    margin: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/images/rain/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body > div {
+    height: 100%;
+    padding: 1rem 2rem;
+}
+
+.weather-info{
+    color: #fff;
+}
+
+/* .weather-info img{
+    display: none;
+} */
+
+.city {
+    text-shadow: 0px 2px 4px #111;
+    font-size: 6rem;
+    font-weight: bolder;
+}
+
+.temp {
+    text-shadow: 0px 2px 4px #111;
+    font-size: 6rem;
+    font-weight: 400;
+}
+
+.temp span {
+    font-size: 3rem;
+}
+
+.col1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.col2 {
+    backdrop-filter: blur(4px);
+    box-shadow: -2px 0px 8px #3331;
+    mix-blend-mode: multiply;
+    background: rgba(0, 0, 0, 0.9);
+    background-image: radial-gradient(rgba(0, 0, 0, 0.4), #000);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    gap: 1rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-box {
+    height: fit-content;
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 6px #0005;
+    border: 1px solid #fff5;
+    border-radius: 6px;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+    text-shadow: 0px 2px 4px #111;
+    mix-blend-mode: screen;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 0.4rem 2rem;
+    background-color: transparent;
+    border: none;
+    font-size: 01rem;
+    color: white;
+}
+
+.search-box input::placeholder {
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-shadow: 0px 2px 4px #111;
+    font-weight: 600;
+}
+
+.search-box input:focus {
+    outline: none;
+}
+
+.search-box button {
+    background-color: transparent;
+    border: none;
+    padding: 0.4rem 0.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.search-box button img:hover {
+    filter: invert(0.5);
+}
+
+.search-box button img {
+    width: 20px;
+    filter: invert();
+    transition: all 0.5s ease;
+}
+
+.weather-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.weather-content li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    cursor: pointer;
+    color: white;
+    gap: 0.7rem;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 2px 6px #0005;
+    border: 1px solid #fff5;
+    border-radius: 6px;
+    padding: 1rem;
+    text-shadow: 0px 2px 4px #111;
+    mix-blend-mode: screen;
+}
+
+.weather-content li img {
+    width: 25px;
+    filter: invert();
+}
+
+.weather-content li div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0.3rem;
+    gap: 1rem;
+}
+
+.weather-content li div strong {
+    font-size: 0.8rem;
+}
+
+#myAudio{
+    display: none;
+}
+
+.audio-player {
+    display: flex; 
+    align-items: center;
+    gap: 1rem;
+    mix-blend-mode: overlay;
+    border-radius: 6px;
+}
+
+#playPauseBtn {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    border-radius: 50%;
+}
+
+#playPauseBtn img{
+    filter: invert();
+}
+
+#timeline {
+    width: 100%;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50px;
+    position: relative;
+}
+
+#playhead {
+    position: absolute;
+    top: -13px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#playhead img{
+    filter: invert(0.5);
+}

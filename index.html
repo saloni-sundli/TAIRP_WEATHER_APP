@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="col1">
+      <div class="weather-info">
+          <h1 class="city" id="city">Kotdwara</h1>
+          <h2 class="temp" id="temp">36<span>°C</span></h2>
+          <!-- <img
+          src="./assets/icons/weather/64x64/day/113.png"
+          id="icon"
+          alt="icon"
+        /> -->
+      </div>
+      <audio id="myAudio" controls>
+        <source src="./assets/songs/rain/1.mp3" type="audio/mp3" id="audio" />
+        Your browser does not support the audio element.
+      </audio>
+      <div class="audio-player">
+        <div id="playPauseBtn" class="play">
+          <img src="./assets/icons/play-circle (1).svg" alt="" />
+        </div>
+        <div id="timeline">
+          <div id="playhead">
+            <img src="./assets/icons/music-note.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col2">
+      <div class="search-box">
+        <input type="text" placeholder="enter your location" id="input" />
+        <button id="search">
+          <img src="./assets/icons/search.svg" alt="search-icon" />
+        </button>
+      </div>
+      <ul class="weather-content">
+        <!-- Your list items here -->
+        <li>
+          <img src="./assets/icons/brightness.svg" alt="" />
+          <div><strong>UV INDEX :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/shower.svg" alt="" />
+          <div><strong>HUMIDITY :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/wind.svg" alt="" />
+          <div><strong>WIND :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/thermometer-half.svg" alt="" />
+          <div><strong>FEELS LIKE :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/eye.svg" alt="" />
+          <div><strong>VISIBILITY :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/gauge-circle-bolt.svg" alt="" />
+          <div><strong>PRESSURE :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/raindrops.svg" alt="" />
+          <div><strong>CHANCE OF RAIN :</strong> <span>-</span></div>
+        </li>
+        <li>
+          <img src="./assets/icons/smoke.svg" alt="" />
+          <div><strong>CLOUD:</strong> <span>-</span></div>
+        </li>
+      </ul>
+    </div>
+    <script src="./script2.js" type="module"></script>
+  </body>
+</html>
